@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Reproduzir Áudio</title>
+    <script>
+        function abrirAudio() {
+            const audioUrl = new URLSearchParams(window.location.search).get("url");
+            if (audioUrl) {
+                window.open(audioUrl, "AudioPopup", "width=400,height=200,resizable=yes");
+            } else {
+                alert("Nenhum áudio foi especificado.");
+            }
+        }
+        window.onload = abrirAudio;
+    </script>
+</head>
+<body>
+    <p>Carregando áudio...</p>
+</body>
+</html>
